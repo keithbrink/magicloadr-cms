@@ -1,0 +1,4 @@
+baseURL = "http://magicloadr.com/"
+languageCode = "en-us"
+title = "MagicLoadr - Automatically Insert Cards Into Toploaders"
+theme = "hpstr"
