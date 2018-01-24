@@ -5,7 +5,7 @@ date: 2018-01-24T09:10:01-05:00
 
 If you’re interested in the tools that I’m using to create everything, here’s the list!
 
-IMG_8577.JPG
+![General Overview image](/images/IMG_8577.JPG)
  
 ## General
 
@@ -16,8 +16,8 @@ IMG_8577.JPG
 - Packing tape
 - Rubber bands
 
-IMG_8583.JPG
- 
+![Canada Robotix Parts](/images/IMG_8583.JPG)
+
 Canada Robotix Parts
 
 - TSL13 Light Sensor
@@ -26,7 +26,7 @@ Canada Robotix Parts
 - 28YBJ-48 Stepper Motor
 - ULN2003 Motor Driver
 
-IMG_8579.JPG
+![Tools](/images/IMG_8579.JPG)
  
 Tools
 
@@ -34,7 +34,7 @@ Tools
 - Glue gun
 - Utility knife
 
-IMG_8582.JPG
+![Tools](/images/IMG_8582.JPG)
  
 Electronics Parts Kit
 
