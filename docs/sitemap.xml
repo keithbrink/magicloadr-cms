@@ -34,4 +34,8 @@
     <priority>0</priority>
   </url>
   
+  <url>
+    <loc>https://magicloadr.com/subscribed/</loc>
+  </url>
+  
 </urlset>
