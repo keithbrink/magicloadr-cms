@@ -1,4 +1,23 @@
-baseURL = "http://magicloadr.com/"
+baseurl = "https://magicloadr.com"
 languageCode = "en-us"
-title = "MagicLoadr - Automatically Insert Cards Into Toploaders"
+title = "MagicLoadr"
 theme = "hpstr"
+pluralizelisttitles = false
+PygmentsCodeFences = true
+Paginate = 8
+disqusShortname = "magicloadr"
+copyright = "(c) 2018 Keith Brink"
+googleAnalytics = "UA-112917572-1"
+publishDir = "docs"
+
+[params]
+	subtitle = "Automatically Insert Cards into Toploaders"
+	[params.author]
+		name = "Keith Brink"
+		avatar = "/images/avatar.jpg"
+		bio = ""
+		github = "keithbrink"
+	[params.image]
+	  feature = "/images/abstract-1.jpg"
+	  credit = "dargadgetz"
+	  creditlink = "http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/"

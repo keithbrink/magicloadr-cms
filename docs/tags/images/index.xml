@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Images on MagicLoadr</title>
+    <link>https://magicloadr.com/tags/images/</link>
+    <description>Recent content in Images on MagicLoadr</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>(c) 2018 Keith Brink</copyright>
+    <lastBuildDate>Wed, 22 May 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://magicloadr.com/tags/images/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A Post with Images</title>
+      <link>https://magicloadr.com/posts/sample-post-images/</link>
+      <pubDate>Wed, 22 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://magicloadr.com/posts/sample-post-images/</guid>
+      <description>Here are some examples of what a post with images might look like. If you want to display two or three images next to each other responsively use figure with the appropriate class. Each instance of figure is auto-numbered and displayed in the caption.
+Figures (for images or video) One Up   Morning Fog Emerging From Trees by A Guy Taking Pictures, on Flickr.  Two Up Apply the half class like so to display two images side by side that share the same caption.</description>
+    </item>
+    
+  </channel>
+</rss>
