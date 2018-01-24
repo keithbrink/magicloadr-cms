@@ -7,87 +7,32 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>(c) 2018 Keith Brink</copyright>
-    <lastBuildDate>Sat, 26 Oct 2013 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 24 Jan 2018 09:10:01 -0500</lastBuildDate>
     
 	<atom:link href="https://magicloadr.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Post with a Background Image</title>
-      <link>https://magicloadr.com/posts/background-image/</link>
-      <pubDate>Sat, 26 Oct 2013 00:00:00 +0000</pubDate>
+      <title>What Im Using</title>
+      <link>https://magicloadr.com/posts/what-im-using/</link>
+      <pubDate>Wed, 24 Jan 2018 09:10:01 -0500</pubDate>
       
-      <guid>https://magicloadr.com/posts/background-image/</guid>
-      <description>Here be a sample post with a custom background image. To utilize this &amp;ldquo;feature&amp;rdquo; just add the following YAML to a post&amp;rsquo;s front matter.
-background: /images/filename.png This little bit of YAML makes the assumption that your background image asset is in the /images folder. If you place it somewhere else or are hotlinking from the web, just include the full http(s):// URL. Either way you should have a background image that is tiled.</description>
+      <guid>https://magicloadr.com/posts/what-im-using/</guid>
+      <description>If you’re interested in the tools that I’m using to create everything, here’s the list!
+IMG_8577.JPG
+General  Raspberry Pi 3 (bought the Canakit) 3.3-12V power adapter Foam boards from Dollarama ($1.50 each) to prototype the chassis Small wooden poles to support the structure or to use as sliders, axles, etc. Packing tape Rubber bands  IMG_8583.JPG
+Canada Robotix Parts
+ TSL13 Light Sensor Laser Pointer Wheels 28YBJ-48 Stepper Motor ULN2003 Motor Driver  IMG_8579.</description>
     </item>
     
     <item>
-      <title>Syntax Highlighting Post</title>
-      <link>https://magicloadr.com/posts/code-highlighting-post/</link>
-      <pubDate>Fri, 16 Aug 2013 00:00:00 +0000</pubDate>
+      <title>What is MagicLoadr?</title>
+      <link>https://magicloadr.com/posts/what-is-magicloadr/</link>
+      <pubDate>Sun, 21 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://magicloadr.com/posts/code-highlighting-post/</guid>
-      <description>Syntax highlighting is a feature that displays source code, in different colors and fonts according to the category of terms. This feature facilitates writing in a structured language such as a programming language or a markup language as both structures and syntax errors are visually distinct. Highlighting does not affect the meaning of the text itself; it is intended only for human readers.1
-GFM Code Blocks GitHub Flavored Markdown fenced code blocks are supported.</description>
-    </item>
-    
-    <item>
-      <title>Sample Link Post</title>
-      <link>https://magicloadr.com/posts/sample-link-post/</link>
-      <pubDate>Mon, 12 Aug 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://magicloadr.com/posts/sample-link-post/</guid>
-      <description>This theme supports link posts, made famous by John Gruber. To use, just add link: http://url-you-want-linked to the post&amp;rsquo;s YAML front matter and you&amp;rsquo;re done.</description>
-    </item>
-    
-    <item>
-      <title>A Post with a Video</title>
-      <link>https://magicloadr.com/posts/video-post/</link>
-      <pubDate>Tue, 25 Jun 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://magicloadr.com/posts/video-post/</guid>
-      <description> Video embeds are responsive and scale with the width of the main content block with the help of FitVids.
-&amp;lt;iframe width=&amp;#34;560&amp;#34; height=&amp;#34;315&amp;#34; src=&amp;#34;//www.youtube.com/embed/SU3kYxJmWuQ&amp;#34; frameborder=&amp;#34;0&amp;#34;&amp;gt;&amp;lt;/iframe&amp;gt;</description>
-    </item>
-    
-    <item>
-      <title>Post with Large Feature Image and Text</title>
-      <link>https://magicloadr.com/posts/readability-feature-post/</link>
-      <pubDate>Thu, 23 May 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://magicloadr.com/posts/readability-feature-post/</guid>
-      <description>This is a sample post with a large feature image up top and tons of text. Odio ad blue bottle vinyl, 90&amp;rsquo;s narwhal commodo bitters pour-over nostrud. Ugh est hashtag in, fingerstache adipisicing laboris esse Pinterest shabby chic Portland. Shoreditch bicycle rights anim, flexitarian laboris put a bird on it vinyl cupidatat narwhal. Hashtag artisan skateboard, flannel Bushwick nesciunt salvia aute fixie do plaid post-ironic dolor McSweeney&amp;rsquo;s. Cliche pour-over chambray nulla four loko skateboard sapiente hashtag.</description>
-    </item>
-    
-    <item>
-      <title>A Post with Images</title>
-      <link>https://magicloadr.com/posts/sample-post-images/</link>
-      <pubDate>Wed, 22 May 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://magicloadr.com/posts/sample-post-images/</guid>
-      <description>Here are some examples of what a post with images might look like. If you want to display two or three images next to each other responsively use figure with the appropriate class. Each instance of figure is auto-numbered and displayed in the caption.
-Figures (for images or video) One Up   Morning Fog Emerging From Trees by A Guy Taking Pictures, on Flickr.  Two Up Apply the half class like so to display two images side by side that share the same caption.</description>
-    </item>
-    
-    <item>
-      <title>Testing Readability with a Bunch of Text</title>
-      <link>https://magicloadr.com/posts/readability-post/</link>
-      <pubDate>Tue, 22 May 2012 00:00:00 +0000</pubDate>
-      
-      <guid>https://magicloadr.com/posts/readability-post/</guid>
-      <description>Portland in shoreditch Vice, labore typewriter pariatur hoodie fap sartorial Austin. Pinterest literally occupy Schlitz forage. Odio ad blue bottle vinyl, 90&amp;rsquo;s narwhal commodo bitters pour-over nostrud. Ugh est hashtag in, fingerstache adipisicing laboris esse Pinterest shabby chic Portland. Shoreditch bicycle rights anim, flexitarian laboris put a bird on it vinyl cupidatat narwhal. Hashtag artisan skateboard, flannel Bushwick nesciunt salvia aute fixie do plaid post-ironic dolor McSweeney&amp;rsquo;s. Cliche pour-over chambray nulla four loko skateboard sapiente hashtag.</description>
-    </item>
-    
-    <item>
-      <title>Sample Post</title>
-      <link>https://magicloadr.com/posts/sample-post/</link>
-      <pubDate>Thu, 10 Mar 2011 00:00:00 +0000</pubDate>
-      
-      <guid>https://magicloadr.com/posts/sample-post/</guid>
-      <description>Below is just about everything you&amp;rsquo;ll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.
-Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Body text Lorem ipsum dolor sit amet, test link adipiscing elit. This is strong. Nullam dignissim convallis est. Quisque aliquam.
-This is emphasized. Donec faucibus. Nunc iaculis suscipit dui. 53 = 125. Water is H2O.</description>
+      <guid>https://magicloadr.com/posts/what-is-magicloadr/</guid>
+      <description>MagicLoadr is an automatic machine that takes standard size cards (MtG cards, for example) and inserts them into penny sleeves, and then into a toploader. The goal is to be able to process thousands of cards without supervision.
+MagicLoadr is a project that I started in Jan 2018 after I purchased my first Raspberry Pi and was trying to figure out what to do with it. I love automation and both my businesses (Rinuu &amp;amp; AZLabels) are 95% automated.</description>
     </item>
     
   </channel>

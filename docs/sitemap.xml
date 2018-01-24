@@ -3,47 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://magicloadr.com/about/</loc>
+    <loc>https://magicloadr.com/posts/what-im-using/</loc>
+    <lastmod>2018-01-24T09:10:01-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://magicloadr.com/posts/background-image/</loc>
-    <lastmod>2013-10-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://magicloadr.com/posts/code-highlighting-post/</loc>
-    <lastmod>2016-09-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://magicloadr.com/posts/sample-link-post/</loc>
-    <lastmod>2013-08-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://magicloadr.com/posts/video-post/</loc>
-    <lastmod>2013-06-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://magicloadr.com/posts/readability-feature-post/</loc>
-    <lastmod>2013-05-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://magicloadr.com/posts/sample-post-images/</loc>
-    <lastmod>2013-05-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://magicloadr.com/posts/readability-post/</loc>
-    <lastmod>2012-05-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://magicloadr.com/posts/sample-post/</loc>
-    <lastmod>2011-03-10T00:00:00+00:00</lastmod>
+    <loc>https://magicloadr.com/posts/what-is-magicloadr/</loc>
+    <lastmod>2018-01-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -52,78 +18,19 @@
   </url>
   
   <url>
-    <loc>https://magicloadr.com/tags/code/</loc>
-    <lastmod>2016-09-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://magicloadr.com/tags/highlighting/</loc>
-    <lastmod>2016-09-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://magicloadr.com/tags/images/</loc>
-    <lastmod>2013-05-22T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://magicloadr.com/tags/intro/</loc>
-    <lastmod>2012-05-22T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://magicloadr.com/tags/link-post/</loc>
-    <lastmod>2013-08-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://magicloadr.com/</loc>
-    <lastmod>2013-10-26T00:00:00+00:00</lastmod>
+    <lastmod>2018-01-24T09:10:01-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://magicloadr.com/posts/</loc>
-    <lastmod>2013-10-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://magicloadr.com/tags/readability/</loc>
-    <lastmod>2013-05-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://magicloadr.com/tags/sample-post/</loc>
-    <lastmod>2013-10-26T00:00:00+00:00</lastmod>
+    <lastmod>2018-01-24T09:10:01-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://magicloadr.com/tags/</loc>
-    <lastmod>2016-09-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://magicloadr.com/tags/test/</loc>
-    <lastmod>2013-05-22T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://magicloadr.com/theme-setup/</loc>
-  </url>
-  
-  <url>
-    <loc>https://magicloadr.com/tags/video/</loc>
-    <lastmod>2013-06-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

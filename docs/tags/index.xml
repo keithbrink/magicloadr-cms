@@ -7,91 +7,9 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>(c) 2018 Keith Brink</copyright>
-    <lastBuildDate>Fri, 16 Aug 2013 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://magicloadr.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Code</title>
-      <link>https://magicloadr.com/tags/code/</link>
-      <pubDate>Fri, 16 Aug 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://magicloadr.com/tags/code/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Highlighting</title>
-      <link>https://magicloadr.com/tags/highlighting/</link>
-      <pubDate>Fri, 16 Aug 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://magicloadr.com/tags/highlighting/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Images</title>
-      <link>https://magicloadr.com/tags/images/</link>
-      <pubDate>Wed, 22 May 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://magicloadr.com/tags/images/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Intro</title>
-      <link>https://magicloadr.com/tags/intro/</link>
-      <pubDate>Tue, 22 May 2012 00:00:00 +0000</pubDate>
-      
-      <guid>https://magicloadr.com/tags/intro/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Link Post</title>
-      <link>https://magicloadr.com/tags/link-post/</link>
-      <pubDate>Mon, 12 Aug 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://magicloadr.com/tags/link-post/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Readability</title>
-      <link>https://magicloadr.com/tags/readability/</link>
-      <pubDate>Thu, 23 May 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://magicloadr.com/tags/readability/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Sample Post</title>
-      <link>https://magicloadr.com/tags/sample-post/</link>
-      <pubDate>Sat, 26 Oct 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://magicloadr.com/tags/sample-post/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Test</title>
-      <link>https://magicloadr.com/tags/test/</link>
-      <pubDate>Wed, 22 May 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://magicloadr.com/tags/test/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Video</title>
-      <link>https://magicloadr.com/tags/video/</link>
-      <pubDate>Tue, 25 Jun 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://magicloadr.com/tags/video/</guid>
-      <description></description>
-    </item>
     
   </channel>
 </rss>
