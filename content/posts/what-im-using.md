@@ -1,5 +1,5 @@
 ---
-title: "What Im Using"
+title: "What I'm Using"
 date: 2018-01-24T09:10:01-05:00
 ---
 
