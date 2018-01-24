@@ -1,8 +1,9 @@
 ---
 type: page
 title: Thanks for Subscribing!
-share: true
+share: false
 hidden: true
+comments: false
 ---
 
-You have successfully suscribed to receive email updates.
+You have successfully subscribed to receive email notifications of new posts.

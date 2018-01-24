@@ -13,6 +13,10 @@
   </url>
   
   <url>
+    <loc>https://magicloadr.com/confirm-subscription/</loc>
+  </url>
+  
+  <url>
     <loc>https://magicloadr.com/categories/</loc>
     <priority>0</priority>
   </url>

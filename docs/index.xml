@@ -34,12 +34,21 @@ MagicLoadr is a project that I started in Jan 2018 after I purchased my first Ra
     </item>
     
     <item>
+      <title>Almost There</title>
+      <link>https://magicloadr.com/confirm-subscription/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://magicloadr.com/confirm-subscription/</guid>
+      <description>Thanks for signing up for email notifications! To confirm your subscription, click the link in the email we just sent you.</description>
+    </item>
+    
+    <item>
       <title>Thanks for Subscribing!</title>
       <link>https://magicloadr.com/subscribed/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://magicloadr.com/subscribed/</guid>
-      <description>You have successfully suscribed to receive email updates.</description>
+      <description>You have successfully subscribed to receive email notifications of new posts.</description>
     </item>
     
   </channel>
