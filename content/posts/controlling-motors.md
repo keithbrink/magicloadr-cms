@@ -154,6 +154,6 @@ Image of parts below hopper
 
 The first time I tried it, the torque of the motor was not able to overcome the resistance of the axle on the foam frame, so I added some tape around the outside of the axle to decrease the resistance, which helped. The motor also was not attached to anything, so I added an anchor point beside it and temporarily tied it off to prevent it from rotating. After all this, this was the result:
 
-![FirstMotionCardsComingOut](/images/FirstMotionCardsComingOut.JPG)
+![First Motion, Cards Coming Out](/images/FirstMotionCardsComingOut.gif)
 
 So, quite rough still, but at least things are moving now! Next up, I'm going to try to add some gearing to the axle so that the motor has more torque, and also add two motors to the place the cards are coming out of to help them move along as well as making sure only one gets fed through at a time.
