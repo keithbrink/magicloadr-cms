@@ -37,7 +37,7 @@
     <meta property="og:image" content="https://magicloadr.com/abstract-2.jpg" />
 
 
-  <meta property="og:updated_time" content="2018-01-24T09:10:01-05:00"/>
+  <meta property="og:updated_time" content="2018-01-26T09:10:01-05:00"/>
 
 
 
@@ -136,6 +136,207 @@
 </div>
 
 <div id="main" role="main">
+
+<article class="hentry">
+  <header>
+    
+    <div class="entry-meta">
+         
+		<span class="entry-date date published updated"><time datetime="2018-01-26 09:10:01 -0500 EST"><a href="/posts/controlling-motors/">Jan 26, 2018</a></time></span>
+        
+      <span class="entry-reading-time">
+        <i class="fa fa-clock-o"></i>
+        Reading time ~4 minutes
+      </span>
+    </div>
+    
+	<h1 class="entry-title"><a href="/posts/controlling-motors/" rel="bookmark" title="Controlling a Motor with the Raspberry Pi" itemprop="url">Controlling a Motor with the Raspberry Pi</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    
+
+<p>My first objective was to get the motor to start feeding out a single card from a stack of cards. I created a quick chassis that would allow me to load a hopper of cards and feed out cards from the bottom.</p>
+
+<p><img src="/images/IMG_8584.JPG" alt="Tower image" /></p>
+
+<p><img src="/images/IMG_8585.JPG" alt="Hopper image" /></p>
+
+<h2 id="connecting-the-pi-to-a-motor">Connecting the Pi to a Motor</h2>
+
+<p>As my first test, I got a few cheap 28YBJ-48 Stepper Motors, which I figured would give me a good amount of control as you can control the steps quite accurately. I was able to connect those to the Pi through a breadboard:</p>
+
+<p><img src="/images/IMG_8586.JPG" alt="Overview of connections image" /></p>
+
+<p><img src="/images/IMG_8587.JPG" alt="Showing the ULN2003" /></p>
+
+<p><img src="/images/IMG_8588.JPG" alt="Pi GPIO Pins Closeup" /></p>
+
+<p>On one side of the breadboard, I have a power supply which supplies 3.3v power to one side of the board and 5v power (the power required by the motor), to the other side of the board. I use a Pi Cobbler from adafruit to connect the Pi to the breadboard via a ribbon cable, so that I can use normal jumpers to wire everything together.</p>
+
+<p>I then use the ULN2003 Motor Driver to connect the stepper motor to the breadboard.</p>
+
+<p>Here&rsquo;s how I wired the ULN2003:</p>
+
+<table>
+<thead>
+<tr>
+<th align="center">ULN2003</th>
+<th align="center">Goes To:</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">VDD</td>
+<td align="center">5V Positive</td>
+</tr>
+
+<tr>
+<td align="center">IN1</td>
+<td align="center">GPIO6</td>
+</tr>
+
+<tr>
+<td align="center">IN2</td>
+<td align="center">GPIO13</td>
+</tr>
+
+<tr>
+<td align="center">IN3</td>
+<td align="center">GPIO19</td>
+</tr>
+
+<tr>
+<td align="center">IN4</td>
+<td align="center">GPIO26</td>
+</tr>
+
+<tr>
+<td align="center">GND</td>
+<td align="center">Ground/Negative</td>
+</tr>
+</tbody>
+</table>
+
+<p>Once you have those connections made, you can start coding the Pi to turn the motor!</p>
+
+<h2 id="programming-the-motor-turns">Programming the Motor Turns</h2>
+
+<p>Essentially, a stepper motor works by turning the different &ldquo;phases&rdquo; or &ldquo;steps&rdquo; of the motor on and off in sequence, which will turn the motor as fast as you are turning the phases on and off. This allow for a lot of precision with the motors.</p>
+
+<p>I found this code from Matt Hawkins that was very useful to test the motors for the first time. Eventually I will need a framework for motor movement, but this was a great introduction:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#!/usr/bin/python</span>
+<span style="color:#75715e">#--------------------------------------</span>
+<span style="color:#75715e">#    ___  ___  _ ____</span>
+<span style="color:#75715e">#   / _ \/ _ \(_) __/__  __ __</span>
+<span style="color:#75715e">#  / , _/ ___/ /\ \/ _ \/ // /</span>
+<span style="color:#75715e"># /_/|_/_/  /_/___/ .__/\_, /</span>
+<span style="color:#75715e">#                /_/   /___/</span>
+<span style="color:#75715e">#</span>
+<span style="color:#75715e">#    Stepper Motor Test</span>
+<span style="color:#75715e">#</span>
+<span style="color:#75715e"># A simple script to control</span>
+<span style="color:#75715e"># a stepper motor.</span>
+<span style="color:#75715e">#</span>
+<span style="color:#75715e"># Author : Matt Hawkins</span>
+<span style="color:#75715e"># Date   : 28/09/2015</span>
+<span style="color:#75715e">#</span>
+<span style="color:#75715e"># http://www.raspberrypi-spy.co.uk/</span>
+<span style="color:#75715e">#</span>
+<span style="color:#75715e">#--------------------------------------</span>
+
+<span style="color:#75715e"># Import required libraries</span>
+<span style="color:#f92672">import</span> sys
+<span style="color:#f92672">import</span> time
+<span style="color:#f92672">import</span> RPi.GPIO <span style="color:#f92672">as</span> GPIO
+
+<span style="color:#75715e"># Use BCM GPIO references</span>
+<span style="color:#75715e"># instead of physical pin numbers</span>
+GPIO<span style="color:#f92672">.</span>setmode(GPIO<span style="color:#f92672">.</span>BCM)
+
+<span style="color:#75715e"># Define GPIO signals to use</span>
+<span style="color:#75715e"># Physical pins 11,15,16,18</span>
+<span style="color:#75715e"># GPIO17,GPIO22,GPIO23,GPIO24</span>
+StepPins <span style="color:#f92672">=</span> [<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">13</span>,<span style="color:#ae81ff">19</span>,<span style="color:#ae81ff">26</span>]
+
+<span style="color:#75715e"># Set all pins as output</span>
+<span style="color:#66d9ef">for</span> pin <span style="color:#f92672">in</span> StepPins:
+  <span style="color:#66d9ef">print</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;Setup pins&#34;</span>
+  GPIO<span style="color:#f92672">.</span>setup(pin,GPIO<span style="color:#f92672">.</span>OUT)
+  GPIO<span style="color:#f92672">.</span>output(pin, False)
+
+<span style="color:#75715e"># Define advanced sequence</span>
+<span style="color:#75715e"># as shown in manufacturers datasheet</span>
+Seq <span style="color:#f92672">=</span> [[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>],
+       [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>],
+       [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>],
+       [<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>],
+       [<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">0</span>],
+       [<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">0</span>],
+       [<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>],
+       [<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>]]
+
+StepCount <span style="color:#f92672">=</span> len(Seq)
+StepDir <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span> <span style="color:#75715e"># Set to 1 or 2 for clockwise</span>
+            <span style="color:#75715e"># Set to -1 or -2 for anti-clockwise</span>
+
+<span style="color:#75715e"># Read wait time from command line</span>
+<span style="color:#66d9ef">if</span> len(sys<span style="color:#f92672">.</span>argv)<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">1</span>:
+  WaitTime <span style="color:#f92672">=</span> int(sys<span style="color:#f92672">.</span>argv[<span style="color:#ae81ff">1</span>])<span style="color:#f92672">/</span>float(<span style="color:#ae81ff">1000</span>)
+<span style="color:#66d9ef">else</span>:
+  WaitTime <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span><span style="color:#f92672">/</span>float(<span style="color:#ae81ff">1000</span>)
+
+<span style="color:#75715e"># Initialise variables</span>
+StepCounter <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+
+<span style="color:#75715e"># Start main loop</span>
+<span style="color:#66d9ef">while</span> True:
+
+  <span style="color:#66d9ef">print</span> StepCounter,
+  <span style="color:#66d9ef">print</span> Seq[StepCounter]
+
+  <span style="color:#66d9ef">for</span> pin <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">4</span>):
+    xpin <span style="color:#f92672">=</span> StepPins[pin]
+    <span style="color:#66d9ef">if</span> Seq[StepCounter][pin]<span style="color:#f92672">!=</span><span style="color:#ae81ff">0</span>:
+      <span style="color:#66d9ef">print</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34; Enable GPIO </span><span style="color:#e6db74">%i</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">%</span>(xpin)
+      GPIO<span style="color:#f92672">.</span>output(xpin, True)
+    <span style="color:#66d9ef">else</span>:
+      GPIO<span style="color:#f92672">.</span>output(xpin, False)
+
+  StepCounter <span style="color:#f92672">+=</span> StepDir
+
+  <span style="color:#75715e"># If we reach the end of the sequence</span>
+  <span style="color:#75715e"># start again</span>
+  <span style="color:#66d9ef">if</span> (StepCounter<span style="color:#f92672">&gt;=</span>StepCount):
+    StepCounter <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+  <span style="color:#66d9ef">if</span> (StepCounter<span style="color:#f92672">&lt;</span><span style="color:#ae81ff">0</span>):
+    StepCounter <span style="color:#f92672">=</span> StepCount<span style="color:#f92672">+</span>StepDir
+
+  <span style="color:#75715e"># Wait before moving on</span>
+  time<span style="color:#f92672">.</span>sleep(WaitTime)</code></pre></div>
+<p>This script accepts a time argument, which is essentially the number of milliseconds to wait before moving to the next phase.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo python stepper.py <span style="color:#ae81ff">20</span></code></pre></div>
+<p>Trigger that command and you should see your motor moving! If you want it to go faster, decrease the time argument, or increase it for slower rotation.</p>
+
+<h2 id="card-feeding">Card Feeding</h2>
+
+<p>I did a quick test to try and feed out some cards this way. I drilled out the center of a wooden pole and connected it as an axle to the motor. I drilled out the center of a plastic wheel to fit into the axle. I added a rubber band around the wheel to give it a better grip on the smooth plastic surface of a card. I then added all of those parts right beneath the card hopper, like so:</p>
+
+<p><img src="/images/IMG_8589.JPG" alt="Motor on chassis" /></p>
+
+<p><img src="/images/IMG_8590.JPG" alt="Wheel under hopper" /></p>
+
+<p>Image of parts below hopper</p>
+
+<p>The first time I tried it, the torque of the motor was not able to overcome the resistance of the axle on the foam frame, so I added some tape around the outside of the axle to decrease the resistance, which helped. The motor also was not attached to anything, so I added an anchor point beside it and temporarily tied it off to prevent it from rotating. After all this, this was the result:</p>
+
+<p><img src="/images/FirstMotionCardsComingOut.JPG" alt="FirstMotionCardsComingOut" /></p>
+
+<p>So, quite rough still, but at least things are moving now! Next up, I&rsquo;m going to try to add some gearing to the axle so that the motor has more torque, and also add two motors to the place the cards are coming out of to help them move along as well as making sure only one gets fed through at a time.</p>
+
+  </div>
+</article>
 
 <article class="hentry">
   <header>

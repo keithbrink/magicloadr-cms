@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>(c) 2018 Keith Brink</copyright>
-    <lastBuildDate>Wed, 24 Jan 2018 09:10:01 -0500</lastBuildDate>
+    <lastBuildDate>Fri, 26 Jan 2018 09:10:01 -0500</lastBuildDate>
     
 	<atom:link href="https://magicloadr.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Controlling a Motor with the Raspberry Pi</title>
+      <link>https://magicloadr.com/posts/controlling-motors/</link>
+      <pubDate>Fri, 26 Jan 2018 09:10:01 -0500</pubDate>
+      
+      <guid>https://magicloadr.com/posts/controlling-motors/</guid>
+      <description>My first objective was to get the motor to start feeding out a single card from a stack of cards. I created a quick chassis that would allow me to load a hopper of cards and feed out cards from the bottom.
+Connecting the Pi to a Motor As my first test, I got a few cheap 28YBJ-48 Stepper Motors, which I figured would give me a good amount of control as you can control the steps quite accurately.</description>
+    </item>
     
     <item>
       <title>What I&#39;m Using</title>

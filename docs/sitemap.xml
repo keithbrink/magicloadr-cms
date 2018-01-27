@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://magicloadr.com/posts/controlling-motors/</loc>
+    <lastmod>2018-01-26T09:10:01-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://magicloadr.com/posts/what-im-using/</loc>
     <lastmod>2018-01-24T09:10:01-05:00</lastmod>
   </url>
@@ -23,13 +28,13 @@
   
   <url>
     <loc>https://magicloadr.com/</loc>
-    <lastmod>2018-01-24T09:10:01-05:00</lastmod>
+    <lastmod>2018-01-26T09:10:01-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://magicloadr.com/posts/</loc>
-    <lastmod>2018-01-24T09:10:01-05:00</lastmod>
+    <lastmod>2018-01-26T09:10:01-05:00</lastmod>
     <priority>0</priority>
   </url>
   
